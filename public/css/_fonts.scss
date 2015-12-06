@@ -1,0 +1,65 @@
+/* font-family: "FuturaPT Light"; */
+@font-face {
+	font-family: "FuturaPT";
+	src: url("../fonts/FuturaPT/FuturaPTLight.eot");
+	src: url("../fonts/FuturaPT/FuturaPTLight.eot?#iefix")format("embedded-opentype"),
+	url("../fonts/FuturaPT/FuturaPTLight.woff") format("woff"),
+	url('../fonts/FuturaPT/FuturaPTLight.woff2') format('woff2'), 
+	url("../fonts/FuturaPT/FuturaPTLight.ttf") format("truetype");
+	font-style: normal;
+	font-weight: 300;
+}
+/* font-family: "FuturaPT Medium"; */
+@font-face {
+	font-family: "FuturaPT";
+	src: url("../fonts/FuturaPT/FuturaPTMedium.eot");
+	src: url("../fonts/FuturaPT/FuturaPTMedium.eot?#iefix")format("embedded-opentype"),
+		url("../fonts/FuturaPT/FuturaPTMedium.woff") format("woff"),
+		url('../fonts/FuturaPT/FuturaPTMedium.woff2') format('woff2'), 
+		url("../fonts/FuturaPT/FuturaPTMedium.ttf") format("truetype");
+	font-style: normal;
+	font-weight: 500;
+}
+
+/* font-family: "GaramondPremrPro Regular"; */
+@font-face {
+	font-family: "GaramondPremrPro";
+	src: url("../fonts/GaramondPremrPro/GaramondPremrPro-Disp.eot");
+	src: url("../fonts/GaramondPremrPro/GaramondPremrPro-Disp.eot?#iefix")format("embedded-opentype"),
+	url("../fonts/GaramondPremrPro/GaramondPremrPro-Disp.woff") format("woff"),
+	url('../fonts/GaramondPremrPro/GaramondPremrPro-Disp.woff2') format('woff2'),
+	url("../fonts/GaramondPremrPro/GaramondPremrPro-Disp.ttf") format("truetype");
+	font-style: normal;
+	font-weight: 400;
+}
+/* font-family: "GaramondPremrPro Bold Italic"; */
+@font-face {
+	font-family: "GaramondPremrPro";
+	src: url("../fonts/GaramondPremrPro/GaramondPremrPro-BdIt.eot");
+	src: url("../fonts/GaramondPremrPro/GaramondPremrPro-BdIt.eot?#iefix")format("embedded-opentype"),
+	url("../fonts/GaramondPremrPro/GaramondPremrPro-BdIt.woff") format("woff"),
+	url('../fonts/GaramondPremrPro/GaramondPremrPro-BdIt.woff2') format('woff2'),
+	url("../fonts/GaramondPremrPro/GaramondPremrPro-BdIt.ttf") format("truetype");
+	font-style: italic;
+	font-weight: 700;
+}
+/* font-family: "GaramondPremrPro Bold Subhead"; */
+@font-face {
+	font-family: "GaramondPremrPro";
+	src: url("../fonts/GaramondPremrPro/GaramondPremrPro-BdSubh.eot");
+	src: url("../fonts/GaramondPremrPro/GaramondPremrPro-BdSubh.eot?#iefix")format("embedded-opentype"),
+	url("../fonts/GaramondPremrPro/GaramondPremrPro-BdSubh.woff") format("woff"),
+	url('../fonts/GaramondPremrPro/GaramondPremrPro-BdSubh.woff2') format('woff2'),
+	url("../fonts/GaramondPremrPro/GaramondPremrPro-BdSubh.ttf") format("truetype");
+	font-style: normal;
+	font-weight: 700;
+}
+
+@mixin FuturaPT {
+	font-family: 'FuturaPT', FuturaPT, sans-serif;
+}
+
+@mixin GaramondPremrPro {
+	font-family: 'GaramondPremrPro', GaramondPremrPro, sans-serif;
+}
+
