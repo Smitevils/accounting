@@ -16,11 +16,15 @@ function colorСhangeMenu() {
 function CheckSvgPerformancePosition() {
 	$('.resume__performance line').attr('class', '');
 	$('.resume__performance circle').attr('r', '5');
+	$('#dot-shadow-1, #dot-shadow-2, #dot-shadow-3, #dot-shadow-4, #dot-shadow-5').attr('r', '5');
+	$('.resume__performance circle').attr('class', '');
 	$('.resume__info').removeClass('active');
 	if (svg_performance_position == 1) {
 		$('.resume__performance #v-line-1').attr('class', 'active');
 		//
 		$('.resume__performance #dot-1').attr('r', '10');
+		$('#dot-shadow-1').attr('r', '15');
+		$('.resume__performance #dot-1').attr('class', 'active');
 		//
 		$('#resume__info-1').addClass('active');
 	} else if (svg_performance_position == 2) {
@@ -30,6 +34,8 @@ function CheckSvgPerformancePosition() {
 		$('.resume__performance #h-line-1').attr('class', 'active');
 		//
 		$('.resume__performance #dot-2').attr('r', '10');
+		$('#dot-shadow-2').attr('r', '15');
+		$('.resume__performance #dot-2').attr('class', 'active');
 		//
 		$('#resume__info-2').addClass('active');
 	} else if (svg_performance_position == 3) {
@@ -43,6 +49,8 @@ function CheckSvgPerformancePosition() {
 		$('#resume__info-3').addClass('active');
 		//
 		$('.resume__performance #dot-3').attr('r', '10');
+		$('#dot-shadow-3').attr('r', '15');
+		$('.resume__performance #dot-3').attr('class', 'active');
 	} else if (svg_performance_position == 4) {
 		$('.resume__performance #v-line-1').attr('class', '');
 		$('.resume__performance #v-line-2').attr('class', '');
@@ -54,6 +62,8 @@ function CheckSvgPerformancePosition() {
 		$('.resume__performance #h-line-3').attr('class', 'active');
 		//
 		$('.resume__performance #dot-4').attr('r', '10');
+		$('#dot-shadow-4').attr('r', '15');
+		$('.resume__performance #dot-4').attr('class', 'active');
 		//
 		$('#resume__info-4').addClass('active');
 	} else if (svg_performance_position == 5) {
@@ -69,6 +79,8 @@ function CheckSvgPerformancePosition() {
 		$('.resume__performance #h-line-4').attr('class', 'active');
 		//
 		$('.resume__performance #dot-5').attr('r', '10');
+		$('#dot-shadow-5').attr('r', '15');
+		$('.resume__performance #dot-5').attr('class', 'active');
 		//
 		$('#resume__info-5').addClass('active');
 	}
@@ -98,7 +110,13 @@ $(document).ready(function() {
 	}
 });
 
-
+$(document).ready(function() {
+	$('#dot-1').hover(function() {
+		alert()
+	}, function() {
+		/* Stuff to do when the mouse leaves the element */
+	});
+});
 
 
 $(document).ready(function() {;

@@ -387,6 +387,10 @@ main {
 	position: relative;
 	display: inline-block;
 	//
+	&.active {
+		background-color: #fbfbfb;
+	}
+	//
 	&.active:before {
 		content: "";
 		position: absolute;
@@ -429,11 +433,28 @@ main {
 		circle {
 			cursor: pointer;
 			@include Transition-All-03s;
-			//
 		}
 		circle.active {
-			//
+			fill: #3a3a3a;
 		}
+		#dot-shadow-1, #dot-shadow-2, #dot-shadow-3, #dot-shadow-4, #dot-shadow-5 {
+			fill: #d5c8b4;
+		}
+		#one {
+			position: absolute;
+			z-index: 1;
+		}
+		#two {
+			position: absolute;
+			z-index: -1;
+		}
+		/*#dots g {position: absolute;}
+		#dots g:nth-of-type(0) {z-index: 1;}
+		#dots g:nth-of-type(1) {z-index: -1;}
+		#dots g:nth-of-type(2n+1) + g circle {
+			fill: blue; r:12;
+			z-index: -1;
+		}*/
 		line {
 			@include Transition-All-03s;
 			stroke-dasharray: 4 6;
