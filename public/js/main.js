@@ -2,6 +2,7 @@ var scrolled = 0;
 var svg_performance_position = 0;
 var svg_performance_interval = 4000;
 var activateSVG = 0;
+var svg_interval;
 
 function colorСhangeMenu() {
 	if (scrolled != 0) {
@@ -93,12 +94,12 @@ $(document).ready(function() {
 		colorСhangeMenu();
 		console.log(scrolled + 'px');
 		// Если доскроллили то включаем интервал
-		if (scrolled > 800 && activateSVG == 0) {
+		if (scrolled > 700 && activateSVG == 0) {
 			activateSVG = 1;
 			//
 			svg_performance_position = 1;
 			CheckSvgPerformancePosition();
-			var svg_interval = setInterval(function() {
+			svg_interval = setInterval(function() {
 				svg_performance_position = svg_performance_position + 1;
 				if (svg_performance_position > 5) {
 					svg_performance_position = 1;
@@ -112,9 +113,155 @@ $(document).ready(function() {
 
 $(document).ready(function() {
 	$('#dot-1').hover(function() {
-		alert()
+		clearInterval(svg_interval)
+		svg_performance_position = 1;
+		CheckSvgPerformancePosition();
+		//alert("очищено");
 	}, function() {
-		/* Stuff to do when the mouse leaves the element */
+		svg_interval = setInterval(function() {
+			svg_performance_position = svg_performance_position + 1;
+			if (svg_performance_position > 5) {
+				svg_performance_position = 1;
+			};
+			//alert(svg_performance_position)
+			CheckSvgPerformancePosition();
+		}, svg_performance_interval);
+	});
+	//
+	$('#dot-2').hover(function() {
+		clearInterval(svg_interval)
+		svg_performance_position = 2;
+		CheckSvgPerformancePosition();
+		//alert("очищено");
+	}, function() {
+		svg_interval = setInterval(function() {
+			svg_performance_position = svg_performance_position + 1;
+			if (svg_performance_position > 5) {
+				svg_performance_position = 1;
+			};
+			//alert(svg_performance_position)
+			CheckSvgPerformancePosition();
+		}, svg_performance_interval);
+	});
+	$('#dot-3').hover(function() {
+		clearInterval(svg_interval)
+		svg_performance_position = 3;
+		CheckSvgPerformancePosition();
+		//alert("очищено");
+	}, function() {
+		svg_interval = setInterval(function() {
+			svg_performance_position = svg_performance_position + 1;
+			if (svg_performance_position > 5) {
+				svg_performance_position = 1;
+			};
+			//alert(svg_performance_position)
+			CheckSvgPerformancePosition();
+		}, svg_performance_interval);
+	});
+	$('#dot-4').hover(function() {
+		clearInterval(svg_interval)
+		svg_performance_position = 4;
+		CheckSvgPerformancePosition();
+		//alert("очищено");
+	}, function() {
+		svg_interval = setInterval(function() {
+			svg_performance_position = svg_performance_position + 1;
+			if (svg_performance_position > 5) {
+				svg_performance_position = 1;
+			};
+			//alert(svg_performance_position)
+			CheckSvgPerformancePosition();
+		}, svg_performance_interval);
+	});
+	$('#dot-5').hover(function() {
+		clearInterval(svg_interval)
+		svg_performance_position = 5;
+		CheckSvgPerformancePosition();
+		//alert("очищено");
+	}, function() {
+		svg_interval = setInterval(function() {
+			svg_performance_position = svg_performance_position + 1;
+			if (svg_performance_position > 5) {
+				svg_performance_position = 1;
+			};
+			//alert(svg_performance_position)
+			CheckSvgPerformancePosition();
+		}, svg_performance_interval);
+	});
+	$('#resume__info-1').hover(function() {
+		clearInterval(svg_interval)
+		svg_performance_position = 1;
+		CheckSvgPerformancePosition();
+		//alert("очищено");
+	}, function() {
+		svg_interval = setInterval(function() {
+			svg_performance_position = svg_performance_position + 1;
+			if (svg_performance_position > 5) {
+				svg_performance_position = 1;
+			};
+			//alert(svg_performance_position)
+			CheckSvgPerformancePosition();
+		}, svg_performance_interval);
+	});
+	$('#resume__info-2').hover(function() {
+		clearInterval(svg_interval)
+		svg_performance_position = 2;
+		CheckSvgPerformancePosition();
+		//alert("очищено");
+	}, function() {
+		svg_interval = setInterval(function() {
+			svg_performance_position = svg_performance_position + 1;
+			if (svg_performance_position > 5) {
+				svg_performance_position = 1;
+			};
+			//alert(svg_performance_position)
+			CheckSvgPerformancePosition();
+		}, svg_performance_interval);
+	});
+	$('#resume__info-3').hover(function() {
+		clearInterval(svg_interval)
+		svg_performance_position = 3;
+		CheckSvgPerformancePosition();
+		//alert("очищено");
+	}, function() {
+		svg_interval = setInterval(function() {
+			svg_performance_position = svg_performance_position + 1;
+			if (svg_performance_position > 5) {
+				svg_performance_position = 1;
+			};
+			//alert(svg_performance_position)
+			CheckSvgPerformancePosition();
+		}, svg_performance_interval);
+	});
+	$('#resume__info-4').hover(function() {
+		clearInterval(svg_interval)
+		svg_performance_position = 4;
+		CheckSvgPerformancePosition();
+		//alert("очищено");
+	}, function() {
+		svg_interval = setInterval(function() {
+			svg_performance_position = svg_performance_position + 1;
+			if (svg_performance_position > 5) {
+				svg_performance_position = 1;
+			};
+			//alert(svg_performance_position)
+			CheckSvgPerformancePosition();
+		}, svg_performance_interval);
+	});
+	$('#resume__info-5').hover(function() {
+		clearInterval(svg_interval)
+		svg_performance_position = 5;
+		CheckSvgPerformancePosition();
+		//alert("очищено");
+	}, function() {
+		svg_interval = setInterval(function() {
+			svg_performance_position = svg_performance_position + 1;
+			if (svg_performance_position > 5) {
+				svg_performance_position = 1;
+			};
+			//alert(svg_performance_position)
+			CheckSvgPerformancePosition();
+		}, svg_performance_interval);
 	});
 });
 
