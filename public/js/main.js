@@ -404,3 +404,4 @@ $(document).ready(function() {
 		$(window).scrollTo('.contacts', 1400);
 	});
 });
+

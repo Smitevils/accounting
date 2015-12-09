@@ -5,23 +5,30 @@
 </head>
 <body class="load">
 	<!-- preloader -->
-	<div class="preloader"></div>
+	<div class="preloader">
+		<section class="mod model-1">
+			<div class="spinner"></div>
+		</section>
+	</div>
 	<script type="text/javascript">
 		window.onload=function(){
 			document.getElementsByTagName('body')[0].classList.remove('load');
 		}
 	</script>
 	<!-- /preloader -->
-	<header>
-		<!-- logo -->
-		<div class="logo">
-			<div class="logo__img"></div>
-			<div class="logo__text">
-				<p>Малинина Людмила Юрьевна</p>
-				<span>Online</span>
-			</div>
+
+	<!-- logo -->
+	<div class="logo">
+		<div class="logo__img"></div>
+		<div class="logo__text">
+			<p>Малинина Людмила Юрьевна</p>
+			<span>Online</span>
 		</div>
-		<!-- /logo -->
+	</div>
+	<!-- /logo -->
+
+	<header>
+		
 		<!-- number -->
 		<div class="header-number">
 			<a href="tel:+79152998448">+7(915)299-84-48</a>
@@ -43,25 +50,25 @@
 	<!-- nav -->
 	<nav>
 		<ul>
-			<li>
+			<li id="nav-1">
 				<span>01</span>
-				<a id="nav-1" href="#">Главная</a>
+				<a href="#">Главная</a>
 			</li>
-			<li>
+			<li id="nav-2">
 				<span>02</span>
-				<a id="nav-2" href="#">Резюме</a>
+				<a href="#">Резюме</a>
 			</li>
-			<li>
+			<li id="nav-3">
 				<span>03</span>
-				<a id="nav-3" href="#">Преимущества</a>
+				<a href="#">Преимущества</a>
 			</li>
-			<li>
+			<li id="nav-4">
 				<span>04</span>
-				<a id="nav-4" href="#">Услуги&nbsp;и&nbsp;цены</a>
+				<a href="#">Услуги&nbsp;и&nbsp;цены</a>
 			</li>
-			<li>
+			<li id="nav-5">
 				<span>05</span>
-				<a id="nav-5" href="#">Контакты</a>
+				<a href="#">Контакты</a>
 			</li>
 		</ul>
 	</nav>
@@ -106,7 +113,7 @@
 				различных сфер деятельности и форм собственности.
 			</p>
 			<div class="resume__prof-line">
-				<div class="resume__row clearfix">
+				<div class="resume__row">
 					<div class="resume__block">
 						<div class="resume__info" id="resume__info-1">
 							<span>1995</span>
@@ -164,7 +171,7 @@
 					</svg>
 				</div>
 				<!-- /performance -->
-				<div class="resume__row clearfix">
+				<div class="resume__row">
 					<div class="resume__block">
 						<div class="resume__info" id="resume__info-2">
 							<span>1999</span>
@@ -541,8 +548,10 @@
 			<p>
 				Обращайтесь, буду рада Вам помочь!
 			</p>
-			<form action="#">
-				<input type="text" placeholder="Ваше имя"><input type="text" placeholder="Телефон или почта"><input type="submit">
+			<form action="#" method="post">
+				<input type="text" placeholder="Ваше имя">
+				<input type="text" placeholder="Телефон или почта">
+				<input type="submit" onclick="event.preventDefault(); $.fancybox.open('#modal-1');">
 			</form>
 		</div>
 		<!-- /contacts -->
@@ -560,6 +569,13 @@
 		</div>
 		<!-- /map -->
 	</main>
+	<!-- modal -->
+	<div id="modal-1" class="modal">
+		<div class="modal-icon"></div>
+		<p>Заявка успешно отпралена!</p>
+		<p>Мы свяжемся с вами в ближайшее время!</p>
+	</div>
+	<!-- modal -->
 	<!-- Scripts -->
 	//= scripts.html
 </body>
