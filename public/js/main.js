@@ -92,7 +92,7 @@ $(document).ready(function() {
 		// изменяем цвет меню при скролле
 		scrolled = $(window).scrollTop();
 		colorСhangeMenu();
-		console.log(scrolled + 'px');
+		//console.log(scrolled + 'px');
 		// Если доскроллили то включаем интервал
 		if (scrolled > 700 && activateSVG == 0) {
 			activateSVG = 1;
@@ -327,4 +327,80 @@ $(document).ready(function() {
 	            }
 	        google.maps.event.addDomListener(window, 'load', init);
 	}
+});
+
+$(document).ready(function(){
+	$('.services-info__slider').slick({
+		dots: false,
+		infinite: true,
+		speed: 300,
+		slidesToShow: 1,
+		adaptiveHeight: true
+	});
+	// On before slide change
+	$('.services-info__slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+		console.log(nextSlide);
+		$('[data-tab]').removeClass('active');
+		$('[data-tab="'+nextSlide+'"]').addClass('active');
+	});
+	//
+	$('.services-info__tab').on('click', function () {
+		var tab = $(this).attr('data-tab');
+		//console.log(tab)
+		$('.services-info__slider').slick('slickGoTo',tab); 
+		//$(this)
+	});
+});
+
+jQuery(document).ready(function($) {
+	var wow = new WOW(
+	  {
+	    boxClass:     'wow',      // animated element css class (default is wow)
+	    animateClass: 'animated', // animation css class (default is animated)
+	    offset:       0,          // distance to the element when triggering the animation (default is 0)
+	    mobile:       true,       // trigger animations on mobile devices (default is true)
+	    live:         true,       // act on asynchronously loaded content (default is true)
+	    callback:     function(box) {
+	      // the callback is fired every time an animation is started
+	      // the argument that is passed in is the DOM node being animated
+	    },
+	    scrollContainer: null // optional scroll container selector, otherwise use window
+	  }
+	);
+	wow.init();
+});
+
+$(document).ready(function() {
+	$('#nav-1').click(function(event) {
+		event.preventDefault();
+		$(window).scrollTo(0, 1400);
+	});
+	$('#nav-2').click(function(event) {
+		event.preventDefault();
+		$(window).scrollTo('.resume', 1400);
+	});
+	$('#nav-3').click(function(event) {
+		event.preventDefault();
+		$(window).scrollTo('.advantages', 1400);
+	});
+	$('#nav-4').click(function(event) {
+		event.preventDefault();
+		$(window).scrollTo('.services', 1400);
+	});
+	$('#nav-5').click(function(event) {
+		event.preventDefault();
+		$(window).scrollTo('.contacts', 1400);
+	});
+	$('.header-button-line').click(function(event) {
+		event.preventDefault();
+		$(window).scrollTo('.contacts', 1400);
+	});
+	$('.button-next').click(function(event) {
+		event.preventDefault();
+		$(window).scrollTo('.services', 1400);
+	});
+	$('.servise-button').click(function(event) {
+		event.preventDefault();
+		$(window).scrollTo('.contacts', 1400);
+	});
 });
